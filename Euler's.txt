@@ -1,0 +1,32 @@
+#define PI 3.14159
+#include<iostream>
+#include<math.h>
+using namespace std;
+
+double f(double x,double y)
+    {
+        double f;
+        f=y*y+1;
+        return f;
+        
+    }
+    
+int main()
+    {
+        double a;
+        double b;
+        double y;
+        double h;
+        cout<<"\nEnter Lower Limit of Evaluation ";cin>>a;
+        cout<<"\nEnter Value at which Function is required ";cin>>b;
+        cout<<"\nEnter Value of Function at Lower Limit i.e f(a) ";cin>>y;
+        cout<<"\nEnter Step Size ";cin>>h;
+        for(double x=a;x<=b;x+=h)
+            {
+                y=y+f(x,y)*h;
+            }
+        
+        cout<<"\n\nValue of Function at x = "<<b<<"\t"<<y;
+    return 0;
+        
+   	}
